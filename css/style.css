@@ -270,6 +270,32 @@ li p,
 dd p {
 	margin-bottom: 0.3em;
 }
+/* 优化段落格式 */
+p {
+    font-size: 25px;  /* 增大字体大小 */
+    line-height: 1.6;
+    margin-bottom: 20px; /* 增加段落之间的间距 */
+    color: #000000;  /* 设置字体颜色为黑色 */
+}
+
+/* 强调报考须知 */
+.notice strong {
+    font-weight: bold;
+    color: #000000; /* 强调字体保持黑色 */
+}
+
+/* 设置期望内容的样式 */
+.expectation {
+    font-weight: normal;  /* 取消斜体 */
+    color: #000000; /* 黑色字体 */
+}
+
+/* 设置培养目标的样式 */
+.goal {
+    font-weight: normal; /* 加粗字体 */
+    color: #000000; /* 黑色字体 */
+}
+
 
 
 /* ol ol {
@@ -434,4 +460,100 @@ table.imgtable,
 table.imgtable td {
 	border: none;
 	text-align: left;
+}
+
+/* 语义化布局样式 */
+.layout-container {
+	width: 100%;
+	display: table;
+	border-collapse: separate;
+	background: white;
+}
+
+section {
+	border-bottom: 1px solid #000000;
+}
+.section-content .introduction-text {
+	font-size: 1.25rem;  /* 增大字体大小 */
+	text-indent: 2em;	/* 首行缩进两个字符 */
+	line-height: 1.6;	/* 增加行高 */
+	margin-bottom: 20px; /* 增加段落之间的间距 */
+	color: #000000;  /* 设置字体颜色为黑色 */
+}
+
+#layout-menu {
+	display: table-cell;
+	background: #f6f6f6;
+	border: 1px solid #dddddd;
+	padding-top: 0.5em;
+	padding-left: 8px;
+	padding-right: 8px;
+	font-size: 1.0em;
+	width: 150px;
+	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+}
+
+#layout-content {
+	display: table-cell;
+	padding-top: 0.0em;
+	padding-left: 1.0em;
+	padding-right: 1.0em;
+	border: none;
+	background: white;
+	text-align: left;
+	vertical-align: top;
+}
+
+/* 导航菜单样式 */
+.menu-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.menu-list li.menu-item {
+	padding-left: 16px;
+	text-indent: -16px;
+}
+
+/* 个人信息区域样式 */
+.profile-container {
+	display: table;
+	width: 100%;
+}
+
+.profile-image {
+	display: table-cell;
+	vertical-align: top;
+}
+
+.profile-info {
+	display: table-cell;
+	padding-left: 1em;
+	text-align: left;
+	vertical-align: top;
+}
+
+.profile-map {
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+}
+
+/* 内容区域样式 */
+.content-section {
+	margin-bottom: 2em;
+}
+
+.section-content {
+	line-height: 32px;
+	width: 98%;
+	text-align: justify;
+}
+
+/* 招生通知样式 */
+.recruitment-notice {
+	margin: 1em 0;
 }
