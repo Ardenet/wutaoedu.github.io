@@ -1,5 +1,5 @@
 ol {
-	list-style: none;
+	list-style: decimal;
 	/* 移除默认的序号样式 */
 	counter-reset: custom-counter;
 	/* 重置计数器 */
