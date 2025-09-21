@@ -40,7 +40,7 @@ p:last-of-type {
 
 body>header {
     height: 8%;
-    background-image: url('/images/keyan3.png');
+    background-image: url('../images/keyan3.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -83,7 +83,7 @@ body>header h1 {
     border: 1px solid #ddd;
     padding: 0.5rem 8px;
     height: 100vh;
-    /* min-width: 8rem; */
+    min-width: 8rem;
     /* overflow-y: auto; */
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 }
@@ -121,8 +121,8 @@ body>header h1 {
     padding: 2rem 0;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
     gap: 1rem;
     font-size: 1.2rem;
     line-height: 2;
@@ -390,86 +390,39 @@ section h2 {
     margin-bottom: 0.3rem;
 }
 
-/* 响应式设计 */
-/* @media (max-width: 768px) {
+/* ==========================================================================
+   响应式设计 - 媒体查询
+   ========================================================================== */
+
+/* 小屏幕设备 (手机) - 768px以下 */
+@media screen and (max-width: 768px) {
+    /* 隐藏侧边栏 */
+    #layout-menu {
+        display: none;
+    }
+    
+    /* 主内容区占满全宽 */
     .layout-container {
         grid-template-columns: 1fr;
-        grid-template-areas:
-            "menu"
-            "content";
+        grid-template-areas: "content";
     }
-
-    #layout-menu {
-        position: static;
-        height: auto;
+    
+    #layout-content {
         width: 100%;
-        font-size: 1.2rem;
-    }
-
-    .profile-upper {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
-        padding: 1rem;
-    }
-
-    .profile-photo {
-        width: 180px;
-    }
-
-    .profile-info {
-        min-width: unset;
-        width: 100%;
-        text-align: center;
-    }
-
-    .profile-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .profile-link {
-        width: 100%;
-        text-align: center;
+        padding: 0.5rem;
     }
 }
 
-@media (max-width: 480px) {
+/* 大屏幕设备 (平板和桌面) - 769px及以上 */
+@media screen and (min-width: 769px) {
+    /* 确保侧边栏显示 */
     #layout-menu {
-        font-size: 1rem;
-        padding: 0.3rem 6px;
+        display: block;
     }
-
-    .profile-section {
-        padding: 1rem 0;
+    
+    /* 保持原有的网格布局 */
+    .layout-container {
+        grid-template-columns: 10vw 1fr;
+        grid-template-areas: "menu content";
     }
-
-    .profile-upper {
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .profile-photo {
-        width: 150px;
-    }
-
-    .profile-name {
-        font-size: 1.8rem;
-    }
-
-    .position-title {
-        font-size: 1.1rem;
-        margin-left: 0.5rem;
-    }
-
-    .profile-positions {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
-
-    .section-content {
-        width: 100%;
-        font-size: 0.95rem;
-    }
-} */
+}
