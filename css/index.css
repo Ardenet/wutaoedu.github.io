@@ -39,14 +39,12 @@ p:last-of-type {
    ========================================================================== */
 
 body>header {
+    width: 100%;
     height: 8%;
-    background-image: url('../images/keyan3.png');
-    background-size: cover;
-    background-position: center;
+    background-color: #f6f6f6;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 body>header h1 {
@@ -54,8 +52,7 @@ body>header h1 {
     margin: 0;
     font-weight: bold;
     text-align: center;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: black;
 }
 
 /* ==========================================================================
@@ -69,6 +66,7 @@ body>header h1 {
     grid-template-areas: "menu content";
     background: white;
     min-height: 100vh;
+    justify-items: center;
 }
 
 /* ==========================================================================
@@ -84,6 +82,7 @@ body>header h1 {
     padding: 0.5rem 8px;
     height: 100vh;
     min-width: 8rem;
+    width: 100%;
     /* overflow-y: auto; */
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 }
@@ -104,7 +103,7 @@ body>header h1 {
     border-radius: 4px;
     transition: all 0.3s ease;
     color: #333;
-    font-weight: 500;
+    font-weight: 500; 
 }
 
 .menu-item a:hover {
@@ -207,6 +206,7 @@ body>header h1 {
     text-align: left;
     padding: 1rem;
     font-size: 1.25rem;
+    max-width: 1500px;
 }
 
 section {
@@ -224,6 +224,13 @@ section h2 {
     /* margin-bottom: 1rem; */
     font-weight: 600;
     font-size: 2rem;
+}
+
+.sticky-heading {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
 }
 
 /* 列表样式 */
@@ -411,6 +418,8 @@ section h2 {
         width: 100%;
         padding: 0.5rem;
     }
+
+    
 }
 
 /* 大屏幕设备 (平板和桌面) - 769px及以上 */
